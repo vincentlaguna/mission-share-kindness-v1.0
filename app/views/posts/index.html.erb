@@ -1,0 +1,24 @@
+<section id="showcase">
+ <div class="container">
+  <h1><b>Your simple act will create an IMPACT</b></h1>
+ 	<p><mark class="highlighted"></span>When you speak healing words you offer others fruit from the Tree of Life.</mark></p>
+ </div>
+</section>
+<section>
+	<% @posts.each do |post| %>
+	<div class="well">
+		<h3><%= post.title %></h3>
+		<p><%= post.body %></p>
+		<%= link_to "Read More", post_path(post), :class => 'btn  btn-default' %>
+	</div>
+<% end %>
+</section>
+<section id="share">
+ 	<div class="container">
+ 		<h1>Join The Community!</h1>
+ 		<form>
+ 			<input type="email" placeholder="Share Email Here">
+ 			<button type="share" class="button_1"><%= link_to "Connect", signup_path %></button>
+ 		</form>
+ 		</div>
+</section>

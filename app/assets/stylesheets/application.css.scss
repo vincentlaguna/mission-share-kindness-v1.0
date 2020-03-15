@@ -1,0 +1,179 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
+body{
+	font-family: 'Playfair Display', serif;
+	font-size:15px;
+	line-height:1.5;
+	padding:0;
+	margin:0;
+	background-color:#FFEFD5;
+}
+
+.highlighted{
+	background: rgba(255,239,213,0.5);
+}
+
+ /* Global */
+.container{
+	width:100%;
+	margin:auto;
+	overflow:auto;
+}
+
+ul{
+	margin:0;
+	padding:0;
+	padding-bottom:35px;
+}
+
+.button_1{
+	height:40px;
+	background:#2F4F4F;
+	border:0;
+	padding-left:20px;
+	padding-right:20px;
+	color:#ffffff;
+}
+
+.dark{
+	padding:15px;
+	background:#2F4F4F;
+	color:#FFEFD5;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+
+/* Header */
+header{
+	background:#2F4F4F;
+	color: #FFEFD5;
+	padding-top:30px;
+	min-height:70px;
+	border-bottom:#9E6C3A 3px solid;
+}
+
+header a{
+	color: #FFEFD5;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-size:16px;
+}
+
+header li{
+	float:left;
+	display:inline;
+	padding: 0 20px 0 20px;
+}
+
+header #branding{
+	float:left;
+
+}
+
+header #branding h1{
+	margin:0;
+}
+
+header nav{
+	float:right;
+	margin-top:10px;
+}
+
+
+/* Showcase Front Page Image*/
+#showcase{
+	min-height:700px;
+	background: asset-url('grace.jpg') no-repeat center;
+	background-size: cover;
+	text-align: center;
+	color:#FFEFD5;
+}
+
+.background-image{
+		background: asset-url('about-background.jpg') no-repeat center;
+		background-size:cover;
+}
+
+#showcase h1{
+    margin-top:100px;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+#showcase p{
+	font-size:20px;
+	color:#000000;
+}
+
+/* share */
+#share{
+	padding:15px;
+	color:#2F4F4F;
+	background:#FFEFD5;
+	font-weight:bolder;
+}
+
+#share input[type="email"]{
+	padding:4px;
+	height:25px;
+	width:250px;
+}
+
+
+
+/* main-about paragraphs */
+article#main-col{
+	font-size:18px;
+	color:#FFFFFF;
+	background:rgba(49,79,79,0.4);
+	line-height:30px;
+	float:left;
+	padding:20px;
+	margin-top:25px;
+	margin-bottom:25px;
+	width:65%;
+}
+
+p{
+	margin-top:20px;
+}
+
+
+footer{
+	padding:20px;
+	margin-top:20px;
+	color:#2F4F4F;
+	text-align: center;
+}
+
+/* users */
+
+.users {
+	list-style: none;
+	margin: 0;
+	li {
+		overflow: auto;
+		padding: 10px 0;
+		border-bottom: 1px solid;
+	}
+}

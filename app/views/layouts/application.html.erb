@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width-device-width">
+  	<meta name="description" content="Your simple act can create an impact">
+  	<meta name="keywords" content="kindness, community, act of kindness, help">
+  	<meta name="author" content="Katie Laguna">
+  	<title>SHARE KINDNESS | Welcome</title>
+   </head>
+     <body>
+     <header>
+     	<div class="container">
+     		<div id="branding">
+     			<h1>SHARE KINDNESS</h1>
+     		</div>
+     		<nav class="nav nav-bar">
+     		<ul>
+     			<li class="current"><%= link_to "Home", home_path %></a></li>
+     			<li><%= link_to "Our Mission", '/about' %></li>
+     			<% if logged_in? %>
+     			<li><%= link_to "Profile", current_user %></li>
+     			<li><%= link_to "Settings", edit_user_path(current_user) %></li>
+     			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+     			<% else %>
+     			<li><%= link_to "Log in", login_path %></li>
+     			<% end %>
+     			<% if logged_in? && current_user.admin? %>
+     			<li><%= link_to "Create Post", new_post_path %></li>
+     			<li><%= link_to "Members", users_path %></li>
+     			<% end %>
+     		</ul>
+     	</nav>
+     </div>
+     </div>
+    </header>
+    <div class="container">
+    <% flash.each do |message_type, message| %>
+    <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+    <% end %>
+    </div>
+    <%= yield %>
+    <footer>
+ 			<p>Share Kindess, Copyright &copy; 2020</p>
+ 		</footer>
+  </body>
+ </html>
+   
