@@ -19,14 +19,14 @@ meaning behind carrying through works that one is passionate about, regardless
 of the obstacles."
 
 The application has basic login authentication using Bcrypt for hashing.
-There are more features to be implemented (as this is the fist MVP iteration).
+There are more features to be implemented (as this is the first MVP iteration).
 Current features enable the admin to CRUD posts, and logged-in users to
-be able to post comments relating to each post and delete them as well. 
+post comments relating to each post and delete them as well. 
 
-Currently working on posts being able able to include images and users
-only being able to delete their own comments. As I learn RSpec, I will
-implement further development using RSpec for testing and having more defined
-documentation and use testing to drive further development. - Vincent Laguna
+Currently working on the posts having the option to include images (Active Storage) 
+and users being able to only delete their own comments. As I learn RSpec, I will
+implement RSpec for testing, having more defined documentation and use 
+testing to drive further development. - Vincent Laguna
 
 * Ruby version 2.6.3p62
 
