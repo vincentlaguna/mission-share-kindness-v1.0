@@ -15,7 +15,7 @@ Vincent Laguna: "Through the journey of developing my first Rails application
 from scratch in collaboration with my wife, I have learned how far my passion
 for software development extends. By producing something that may impact 
 individuals in a positive way I have a richer understanding of the 
-meaning of carrying through works that one is passionate about, regardless
+meaning behind carrying through works that one is passionate about, regardless
 of the obstacles."
 
 The application has basic login authentication using Bcrypt for hashing.
