@@ -1,5 +1,9 @@
+<div class="container">
 <h2><%= @post.title %></h2>
-<p><%= @post.body %></p>
+	<div id="post">
+		<%= @post.body %>
+	</div>	
+</div>
 <hr>
 <% if logged_in? && current_user.admin? %>
 <%= link_to "Edit", edit_post_path(@post), :class => 'btn btn-default' %>
